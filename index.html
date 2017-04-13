@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+</head>
+<body ng-controller="MainController">
+<div class="page-header">
+    <div class="pull-right" style="position: relative; margin-right: 90px;" ng-click="goCart()">
+        <span style="text-align: center;left: 22px;top: 0px;bottom: 97px;background-color: #f0ad4e; position: absolute; border: solid 1px #ccc;; border-radius: 50px; height: 20px; width: 20px">{{cartValue}}</span>
+        <span class="glyphicon glyphicon-shopping-cart" style="top: 11px;position: absolute;color:red;font-size: 42px;margin-right: 37px;" aria-hidden="true"></span>
+
+    </div>
+    <h1 ng-click="goHome()">Shopping Cart</h1>
+</div>
+<div ng-view=""></div>
+<script src="node_modules/angular/angular.min.js"></script>
+<script src="node_modules/angular-route/angular-route.min.js"></script>
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="app.js"></script>
+<script src="controllers/FirstController.js"></script>
+<script src="controllers/AddressController.js"></script>
+<script src="controllers/SummeryController.js"></script>
+<script src="services/productDetails.js"></script>
+<script src="services/SummeryService.js"></script>
+</body>
+</html>

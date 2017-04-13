@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-md-4 col-lg-4" ng-repeat="details in details">
+            <div class="thumbnail">
+                <img src={{details.imgURL}} alt="Image">
+                <div class="caption">
+                    <h3>Color: {{details.color | uppercase}}</h3>
+                    <div>
+                        <button style="padding: 5px; border: 1px solid black;float: left;margin-right: 6px" ng-click="changeSize('s')">S</button>
+                        <button style="padding: 5px; border: 1px solid black;float: left;margin-right: 6px" ng-click="changeSize('m')">M</button>
+                        <button style="padding: 5px; border: 1px solid black;float: left;margin-right: 6px" ng-click="changeSize('l')">L</button>
+                        <button style="padding: 5px; border: 1px solid black;float: left;margin-right: 6px" ng-click="changeSize('xl')">XL</button>
+                    </div>
+                    <p style="clear: both; color: #8b0808;padding: 5px;font-size: 23px;font-family: sans-serif">{{details.price | currency}}</p>
+                    <button class="btn btn-primary" ng-click="addToCart(details)">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
